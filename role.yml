@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: testdevns
+  name: testdevns-admin-role
+rules:
+- apiGroups: ["","extensions","apps","compose.docker.com"]
+  resources: ["pods","deployments","replicasets","stacks","services"]
+  verbs: ["get","watch","list","create","update","patch","delete"]

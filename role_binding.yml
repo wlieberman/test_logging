@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: testdevns-rold-binding
+  namespace: testdevns
+subjects:
+- kind: Group
+  name: team:2660e941-29d2-406e-8404-166c8c08ae2c:56148137-fef7-41eb-b01a-7d6727d8c6ba
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
